@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CPF - Verificador e gerador</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>CPF Generator</h1>
+    <section>
+        <div id="interactive">
+            <p>Gerar com pontuação?
+                <input type="radio" name="radPontua" id="pSim" checked>
+                <label for="pSim">Sim</label>
+                <input type="radio" name="radPontua" id="pNao">
+                <label for="pNao">Não</label></p>
+            <p>CPF: <input type="text" name="CPF" id="CPF"></p>
+            <p><input type="button" value="GERAR" onclick="gerar()">
+            <input type="button" value="VERIFICAR" onclick="verificar()"></p>
+        </div>
+        <div id="status">
+            <p id="verify">STATUS: <span id="result"></span></p>
+            <p id="estado">ESTADO: <span id="UF" style="color: blue"></span></p>
+        </div>
+    </section>
+    <footer>Made by Ze Manel - 2020</footer>
+    <footer style="color: red;">!NENHUM DADO É COLETADO PELO SITE!</footer>
+</body>
+<script src="script.js"></script>
+</html>

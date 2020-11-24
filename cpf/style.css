@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+section{
+    text-align: center;
+    background-color: white;
+    width: 350px;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+}
+
+div#status{
+    text-align: left;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+input#CPF{
+    text-align: right;
+}
