@@ -1,0 +1,38 @@
+body{
+    background-color: #000000;
+    font: normal 18px Arial;
+    text-align: center;
+}
+header{
+    color: white;
+}
+section{
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 15px;
+    width: 450px;
+    margin: auto;
+    box-shadow: 3px 3px 6px rgba(122, 238, 170, 0.459);
+}
+footer{
+    color: white;
+    font-style: italic;
+}
+section#analogico{
+    height: 400px;
+}
+div.analog{
+    position: relative;
+    margin: auto;
+}
+img.analog{
+    position: absolute;
+    top: 55px;
+    left: 82px;
+}
+
+img.seg{
+    width: 50px;
+    height: 75px;
+}
