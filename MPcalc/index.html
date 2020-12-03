@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Mercado Pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://logospng.org/download/mercado-pago/logo-mercado-pago-icone-256.png" width="75px" height="75px">
+        <h1>Calculadora de taxa Mercado Pago</h1>
+    </header>
+    <h4>VALOR A RECEBER</h4>
+    <input type="number" name="valor" id="valor">
+    <h4>PRAZO PARA RECEBER</h4>
+    <p>
+        <input type="radio" id="hora" name="prazo" value="na hora" checked>
+        <label for="na hora">na hora</label>
+        <input type="radio" id="dia14" name="prazo" value="14 dias">
+        <label for="14 dias">14 dias</label>
+        <input type="radio" id="dia30" name="prazo" value="30 dias">
+        <label for="30 dias">30 dias</label>
+    </p>
+    <h4>FORMA DE PAGAMENTO</h4>
+    <p>
+        <input type="radio" name="paga" id="point" value="point" checked>
+        <label for="point">Point</label>
+        <input type="radio" name="paga" id="link" value="link">
+        <label for="link">Link</label>
+        <input type="radio" name="paga" id="qrcode" value="qrcode">
+        <label for="qrcode">QR Code</label>
+    </p>
+    <input type="button" value="CALCULAR" onclick="calctaxas()">
+</br></br>
+    <table>
+        <tr>
+            <th>PARCELAS</th>
+            <th>TAXA</th>
+            <th>VALOR FINAL</th>
+            <th>V. PARCELA</th>
+        </tr>
+        <tr>
+            <td>Débito</td>
+            <td id="tx0"></td>
+            <td id="tx0f"></td>
+            <td id="tx0p"></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td id="tx1"></td>
+            <td id="tx1f"></td>
+            <td id="tx1p"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td id="tx2"></td>
+            <td id="tx2f"></td>
+            <td id="tx2p"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td id="tx3"></td>
+            <td id="tx3f"></td>
+            <td id="tx3p"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td id="tx4"></td>
+            <td id="tx4f"></td>
+            <td id="tx4p"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td id="tx5"></td>
+            <td id="tx5f"></td>
+            <td id="tx5p"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td id="tx6"></td>
+            <td id="tx6f"></td>
+            <td id="tx6p"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td id="tx7"></td>
+            <td id="tx7f"></td>
+            <td id="tx7p"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td id="tx8"></td>
+            <td id="tx8f"></td>
+            <td id="tx8p"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td id="tx9"></td>
+            <td id="tx9f"></td>
+            <td id="tx9p"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td id="tx10"></td>
+            <td id="tx10f"></td>
+            <td id="tx10p"></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td id="tx11"></td>
+            <td id="tx11f"></td>
+            <td id="tx11p"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td id="tx12"></td>
+            <td id="tx12f"></td>
+            <td id="tx12p"></td>
+        </tr>
+    </table>
+    <footer>Emanoel Rodrigues - 2020</footer>
+
+    <iframe width="857" height="482" src="https://www.youtube.com/embed/OKzTTsTMX9A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>

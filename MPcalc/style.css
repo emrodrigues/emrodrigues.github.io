@@ -1,0 +1,23 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-color: rgb(0, 180, 252);
+    border-width: 5px;
+    color: rgb(245, 144, 140);
+}
+td{
+    border-style: solid;
+    border-color: rgb(0, 180, 252);;
+    border-width: 2px;
+}
+th{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px; 
+}
