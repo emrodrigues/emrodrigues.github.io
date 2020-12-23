@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha Pokemon Base</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.unpkg.com/vue"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+
+        <div class="panel scores">
+            <div class="score">
+                <h1>JOGADOR</h1>
+                <div class="life-bar">
+                    <div class="life"
+                    :class="{danger: playerHP < 20}"
+                    :style="{width: playerHP + '%'}"></div>
+                </div>
+                <div>{{ playerHP }}%</div>
+            </div>
+
+            <div class="score">
+                <h1>INIMIGO</h1>
+                <div class="life-bar">
+                    <div class="life"
+                    :class="{danger: enemyHP < 20}"
+                    :style="{width: enemyHP + '%'}"></div>
+                </div>
+                <div>{{ enemyHP }}%</div>
+            </div>
+        </div>
+
+        <div class="panel result" v-if="hasResult">
+            <div class="lose" v-if="playerHP == 0">Você perdeu =C</div>
+            <div class="win" v-else>Você ganhou!!!</div>
+        </div>
+
+        <div class="panel buttons">
+            <template v-if="running">
+                <button class="btn attack" @click="attack(false)">ATAQUE</button>
+                <button class="btn especial-attack" @click="attack(true)">ESPECIAL</button>
+                <button class="btn heal" @click="hurtAndHeal">CURAR</button>
+                <button class="btn run" @click="running = false">CORRER</button>
+            </template>
+
+            <template v-else>
+                <button class="btn new-game" @click="startGame">INICIAR JOGO</button>
+            </template>
+        </div>
+
+        <div v-if="logs.length" class="panel logs">
+            <ul>
+                <li v-for="log in logs" class="log" :class="log.cls">{{ log.text }}</li>
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script src="app.js"></script>
